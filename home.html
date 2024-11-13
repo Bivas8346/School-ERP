@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="./image/Digiex_logo.png" type="image/x-icon">
+    <title>School Managment</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <!-- Libraries Stylesheet -->
+    <!-- <link href="./home4.css" rel="stylesheet" /> -->
+    <link href="./owlcarousel.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./home2.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="./home1.css" rel="stylesheet" />
+    <!-- Google Tag Manager -->
+    <!-- <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MFS894R3");
+    </script> -->
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MFS894R3"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Flooting Button -->
+    <div class="float-sm">
+      <div class="icon-container">
+        <a
+          href="https://api.whatsapp.com/send?phone=+91 6294757182&amp;text=Hi, Please send Whats App message"
+          class="fixed-icon2"
+          target="_blank"
+          ><i class="fa fa-whatsapp" style="font-size: 28px"></i
+        ></a>
+        <a href="tel:+919212871807" class="fixed-icon3" target="_blank"
+          ><i class="fa fa-phone" style="font-size: 28px"></i
+        ></a>
+      </div>
+    </div>
+    <!-- Flooting Button -->
+    <!-- Navbar start -->
+    <div class="container-fluid fixed-top">
+      <div class="container">
+        <nav class="navbar navbar-light bg-white navbar-expand-xl">
+          <a href="home.html" class="navbar-brand">
+            <h1 class="text-primary display-6">
+              <img src="./image/Digiex_Web.png" width="120px" alt="logo" />
+            </h1>
+          </a>
+          <a href="#" class="nav-item bg-white Navitem">2341567894</a>
+          <button
+            class="navbar-toggler py-2 px-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars text-primary"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse bg-white justify-content-end"
+            id="navbarCollapse"
+          >
+            <a href="#" class="navbar-brand"> </a>
+            <a href="#" class="navbar-brand"> </a>
+            <div class="navbar-nav mx-auto1">
+              <a href="#" class="nav-item nav-link active">Home</a>
+              <a href="#" class="nav-item nav-link active">About Us</a>
+              <a href="#" class="nav-item nav-link active">Products</a>
+              <a href="#" class="nav-item nav-link active">Resources</a>
+              <a href="#" class="nav-item nav-link active">Feature</a>
+
+              <a
+                class="btn border-primary bg-primary rounded-pill text-light"
+                href="#contact"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Modal Search Start -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content rounded-0">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Search by keyword
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body d-flex align-items-center">
+            <div class="input-group w-75 mx-auto d-flex">
+              <input
+                type="search"
+                class="form-control p-3"
+                placeholder="keywords"
+                aria-describedby="search-icon-1"
+              />
+              <span id="search-icon-1" class="input-group-text p-3"
+                ><i class="fa fa-search"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Search End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid hero-header" style="top: 0px">
+      <div class="container">
+        <div class="row g-5 align-items-center pb-4">
+          <div class="col-md-12 col-lg-7">
+            <h1 class="mt-3 display-3" style="color: indigo">
+              <span style="color: rgb(36, 87, 255)">New</span
+              ><span style="font-size: 55px">School Management Software</span>
+            </h1>
+            <h4 class="mt-3 mb-5" style="color: black">
+              School management operations for the best School ERP software!
+            </h4>
+          </div>
+          <div class="col-md-12 col-lg-5">
+            <div id="" class="">
+              <img
+                src="image/Banner-img.png"
+                alt="avtar 1"
+                height="350px;"
+                width=""
+                style="object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero End -->
+    <!-- Fact Start -->
+    <div class="container-fluid py-5">
+      <div class="container">
+        <div class="bg-light p-5 rounded">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="counter bg-white rounded p-5">
+                <i class="fas fa-school text-primary factimg"></i>
+                <h4>Schools</h4>
+                <h1>150+</h1>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="counter bg-white rounded p-5">
+                <i class="fas fa-user-cog text-primary factimg"></i>
+                <h4>Years Expertise</h4>
+                <h1>10+</h1>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="counter bg-white rounded p-5">
+                <i class="fas fa-users text-primary factimg"></i>
+                <h4>Happy Clients</h4>
+                <h1>410+</h1>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="counter bg-white rounded p-5">
+                <i class="fas fa-headset text-primary factimg"></i>
+                <h4>Hours Of Supports</h4>
+                <h1>24X7</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fact End -->
+    <!-- Contact Start -->
+    <div class="container-fluid contact hero-header2 py-5" id="contact">
+      <div class="container">
+        <div class="p-5">
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="text-center mx-auto" style="max-width: 700px">
+                <h1 class="text-light">Contact Us</h1>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <form action="" method="POST" class="contact-form">
+                <input
+                  type="text"
+                  name="name"
+                  value
+                  class="w-100 form-control border-0 py-3 mb-2"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone no"
+                  class="w-100 form-control border-0 py-3 mb-2"
+                  placeholder="Phone No"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="w-100 form-control border-0 py-3 mb-2"
+                  placeholder="Enter Your Email"
+                />
+                <input
+                  type="text"
+                  name="School Name"
+                  class="w-100 form-control border-0 py-3 mb-2"
+                  placeholder="School Name"
+                />
+                <select
+                  name="role"
+                  id="role"
+                  class="w-100 form-control border-0 py-3 mb-2"
+                >
+                  <option value="">--- Select Your Role ---</option>
+
+                  <option value="Principal">Principal</option>
+
+                  <option value="Teacher">Teacher</option>
+
+                  <option value="Other">Other</option>
+                </select>
+
+                <button
+                  class="w-100 btn form-control border-secondary py-3 bg-secondary text-primary"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+            <div class="col-lg-5">
+              <div class="d-flex p-4 rounded mb-3 bg-white">
+                <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
+                <div>
+                  <h4>Address</h4>
+                  <p class="mb-2">1234 new kolkata new address, Kolkata</p>
+                </div>
+              </div>
+              <div class="d-flex p-4 rounded mb-3 bg-white">
+                <i class="fas fa-envelope fa-2x text-primary me-4"></i>
+                <div>
+                  <h4>Mail Us</h4>
+                  <p class="mb-2">
+                    <a
+                      href="mailto:info@nascorptechnologies.com"
+                      target="_blank"
+                      >1234demo@gmail.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex p-4 rounded bg-white">
+                <i class="fa fa-phone fa-2x text-primary me-4"></i>
+                <div>
+                  <h4>Telephone</h4>
+                  <p class="mb-2" target="_blank">
+                    <a href="tel:9212871807">1234567895</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+    <!-- Working Module Start -->
+    <div class="container py-2">
+      <div class="container">
+        <section class="customizable-modules">
+          <div class="content-wrap">
+            <h1
+              class="display-4 hover"
+              style="color: rgb(36, 87, 255); margin-left: 20%"
+            >
+              Customizable modules
+            </h1>
+            <div class="flex-element">
+              <div class="turn-lists-prt">
+                <ul class="turn-lists">
+                  <li class="dataslide is-active" data-slide="1">
+                    <p>Active 1</p>
+                  </li>
+                  <li class="dataslide" data-slide="2">
+                    <p>Active 2</p>
+                  </li>
+                  <li class="dataslide" data-slide="3">
+                    <p>Active 3</p>
+                  </li>
+                  <li class="dataslide" data-slide="4">
+                    <p>Active 4</p>
+                  </li>
+                  <li class="dataslide" data-slide="5">
+                    <p>Active 5</p>
+                  </li>
+                  <li class="dataslide" data-slide="6">
+                    <p>Active 6</p>
+                  </li>
+                  <li class="dataslide" data-slide="7">
+                    <p>Active 7</p>
+                  </li>
+                  <li class="dataslide" data-slide="8">
+                    <p>Active 8</p>
+                  </li>
+                  <li class="dataslide" data-slide="9">
+                    <p>Active 9</p>
+                  </li>
+                  <li class="dataslide" data-slide="10">
+                    <p>Active 10</p>
+                  </li>
+                  <li class="dataslide" data-slide="10">
+                    <p>Active 11</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="turn-inf-list">
+                <div class="turn-content-slider">
+                  <div class="turncnts is-active">
+                    <h3>Active 1</h3>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Nulla nostrum numquam dolore, ullam, ea, cupiditate
+                      molestiae ipsa aliquam explicabo laboriosam veritatis at.
+                      Omnis deserunt deleniti, dolorem veniam corporis accusamus
+                      assumenda!
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-1.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turncnts">
+                    <h3>Active 2</h3>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Culpa quos in, facere, quia fuga cupiditate quidem nam,
+                      doloremque iure ipsam maiores placeat veniam reiciendis
+                      autem quibusdam dolores? Ipsa, numquam error?
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-4.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turncnts">
+                    <h3>Active 3</h3>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Eveniet rem nam vitae obcaecati, unde tempora, tempore
+                      expedita accusantium blanditiis nemo ducimus ut recusandae
+                      dignissimos molestiae, itaque enim reprehenderit sapiente
+                      ipsum?
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-3.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turncnts">
+                    <h3>Active 4</h3>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Id, blanditiis cum. Voluptate exercitationem odit
+                      distinctio expedita? Possimus quas eos consequuntur, aut
+                      tenetur quod, soluta voluptatem est nihil, quam quae
+                      labore!
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-4.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turncnts">
+                    <h3>Active 5</h3>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Voluptas nesciunt quidem deleniti aperiam natus eum sequi
+                      autem non! Exercitationem neque aspernatur deserunt
+                      eligendi officiis provident consequatur nesciunt, quisquam
+                      ratione. Deserunt.
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-5.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turncnts">
+                    <h3>Active 6</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Nisi iusto, amet similique saepe dignissimos reiciendis ab
+                      earum beatae, facere nesciunt molestias sed blanditiis
+                      ullam? Cum consequatur quas delectus cupiditate sunt.
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-2.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turncnts">
+                    <h3>Active 7</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Rem repellendus ipsa eaque obcaecati illo nemo, deleniti
+                      tenetur. Dicta fugit recusandae esse, accusantium earum
+                      unde quae. Veniam ratione aliquid quisquam officia?
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-1.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turncnts">
+                    <h3>Active 8</h3>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Sunt inventore illum consectetur fugiat odio
+                      necessitatibus similique facere repudiandae. Similique
+                      expedita commodi atque architecto a nostrum odio maiores!
+                      Veritatis, aut inventore!
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-3.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turncnts">
+                    <h3>Active 9</h3>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Reiciendis impedit veritatis enim a facilis accusamus
+                      mollitia optio repellat, iure blanditiis saepe officiis
+                      dolorum natus, doloribus omnis veniam placeat illum quos.
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-4.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turncnts">
+                    <h3>Active 10</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Quisquam facere corporis deleniti tenetur excepturi
+                      aperiam hic debitis culpa exercitationem quibusdam tempore
+                      molestias expedita beatae labore iste, dolores, sapiente
+                      nemo minima!
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-5.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="turncnts">
+                    <h3>Active 11</h3>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Esse error voluptas fuga ab cupiditate excepturi quas
+                      assumenda facere recusandae quibusdam ratione, alias
+                      earum. Odio modi dolore animi optio quis iure.
+                    </p>
+                    <div class="turn-img">
+                      <div class="turn-img-bg">
+                        <div class="zp-home-ap">
+                          <picture>
+                            <source srcset="" type="image/webp" />
+                            <img
+                              alt="Learning management system"
+                              data-lazy=""
+                              src="./image/SMdemo-3.webp"
+                              width="820"
+                              height="400"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Working Module End -->
+    <!-- ERP Start-->
+    <div class="container-fluid py-5=2" id="erp">
+      <div class="container py-2">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px">
+          <h1 class="display-4 hover" style="color: rgb(36, 87, 255)">
+            ERP MODULES
+          </h1>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <img
+                    src="image/admin.png"
+                    class="img-fluid rounded-circle w-100 image-round"
+                    alt="admin avtar"
+                  />
+                </div>
+                <div class="col-9">
+                  <a href="#" class="h5">ADMINISTRATION</a>
+                  <!-- <div class="d-flex my-3">
+                    <ul>
+                      <li>Student Management</li>
+                      <li>Admission and Registration</li>
+                      <li>Transport Management</li>
+                      <li>Library and Inventory</li>
+                      <li>Hostel Management</li>
+                      <li>Health Management</li>
+                    </ul>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <img
+                    src="image/academics.png"
+                    class="img-fluid rounded-circle w-100 image-round"
+                    alt="admin avtar-1"
+                  />
+                </div>
+                <div class="col-9">
+                  <a href="#" class="h5">ACADEMICS</a>
+                  <!-- <div class="d-flex my-3">
+                    <ul>
+                      <li>Assessment and Report Card Generation</li>
+                      <li>Homework and Assignment</li>
+                      <li>Student Attendance</li>
+                      <li>Behaviour mapping</li>
+                      <li>Lesson Planning</li>
+                    </ul>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <img
+                    src="image/finance.png"
+                    class="img-fluid rounded-circle w-100 image-round"
+                    alt="admin avtar-2"
+                  />
+                </div>
+                <div class="col-9">
+                  <a href="#" class="h5">FINANCE</a>
+                  <!-- <div class="d-flex my-3">
+                    <ul>
+                      <li>Fee Collection and Management</li>
+                      <li>Online Fee Payment</li>
+                      <li>Leave and Payroll Management</li>
+                      <li>Financial Accounting</li>
+                    </ul>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <img
+                    src="image/announce.png"
+                    class="img-fluid rounded-circle w-100 image-round"
+                    alt="admin avtar-3"
+                  />
+                </div>
+                <div class="col-9">
+                  <a href="#" class="h5">COMMUNICATION</a>
+                  <!-- <div class="d-flex my-3">
+                    <ul>
+                      <li>Circular and Announcement</li>
+                      <li>One to One Communication</li>
+                      <li>Upload Study Material</li>
+                      <li>Mobile Apps and Web Portals</li>
+                    </ul>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <img
+                    src="image/onlinesa.png"
+                    class="img-fluid rounded-circle w-100 image-round"
+                    alt="admin avtar-4"
+                  />
+                </div>
+                <div class="col-9">
+                  <a href="#" class="h5">ONLINE SCHOOL ACTIVITY</a>
+                  <!-- <div class="d-flex my-3">
+                    <ul>
+                      <li>Activities & Competitions</li>
+                      <li>Rewards and Achievements</li>
+                      <li>Group-wise Communication</li>
+                      <li>Online Quiz and Tests</li>
+                      <li>Timetable and Substitution</li>
+                    </ul>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <img
+                    src="image/schoolsecurity.png"
+                    class="img-fluid rounded-circle w-100 image-round"
+                    alt="admin avtar-5"
+                  />
+                </div>
+                <div class="col-9">
+                  <a href="#" class="h5">SECURE YOUR SCHOOL</a>
+                  <!-- <div class="d-flex my-3">
+                    <ul>
+                      <li>Visitor Management</li>
+                      <li>OTP Verification for Student Pick Ups</li>
+                      <li>Approval Based Gate Pass</li>
+                      <li>Transport Attendance</li>
+                    </ul>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ERP Shop End-->
+
+    <!-- Application Start -->
+    <div class="container-fluid bg-light py-5 mt-3" id="mobile">
+      <div class="container">
+        <div class="text-center mx-auto mb-3" style="max-width: 700px">
+          <h1 class="display-4 hover" style="color: rgb(36, 87, 255)">
+            <span style="font-weight: normal">MOBILE</span> APPLICATION
+          </h1>
+        </div>
+        <div class="bg-light p-5 rounded">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="counter bg-white rounded p-5">
+                <img
+                  src="image/parent.png"
+                  style="
+                    border: 2px solid rgb(36, 87, 255);
+                    padding: 10px;
+                    border-radius: 70px;
+                    width: 70%;
+                  "
+                  class="Appimage"
+                  alt="app avtar"
+                />
+                <h4 style="margin-top: 30px">Parent App</h4>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="counter bg-white rounded p-5">
+                <img
+                  src="image/teacher.png"
+                  style="
+                    border: 2px solid rgb(36, 87, 255);
+                    padding: 10px;
+                    border-radius: 70px;
+                    width: 70%;
+                  "
+                  class="Appimage"
+                  alt="app avtar"
+                />
+                <h4 style="margin-top: 30px">Teacher App</h4>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="counter bg-white rounded p-5">
+                <img
+                  src="image/management.png"
+                  style="
+                    border: 2px solid rgb(36, 87, 255);
+                    padding: 10px;
+                    border-radius: 70px;
+                    width: 70%;
+                  "
+                  class="Appimage"
+                  alt="app avtar"
+                />
+                <h4 style="margin-top: 30px">Management App</h4>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="counter bg-white rounded p-5">
+                <img
+                  src="image/students.png"
+                  style="
+                    border: 2px solid rgb(36, 87, 255);
+                    padding: 10px;
+                    border-radius: 70px;
+                    width: 70%;
+                  "
+                  class="Appimage"
+                  alt="app avtar"
+                />
+                <h4 style="margin-top: 30px">Student App</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Application Start -->
+    <!-- Fact Start -->
+    <br />
+    <div class="container text-center">
+      <a
+        class="btn border-primary bg-primary rounded-pill py-3 px-5 text-light"
+        href="#contact"
+        >Connect with us</a
+      >
+      <br />
+    </div>
+
+    <div class="container-fluid banner hero-header1 my-5" id="website">
+      <div class="container py-5">
+        <div class="row g-4 align-items-center">
+          <!-- <div class="col-lg-2 col-md-12">
+            <div class="align-items-center">
+              <div class="icons">
+                <img src="image/payment.png" alt="services icon" />
+              </div>
+              <h6 style="margin-top: 15px; text-align: left">
+                PAYMENT GATEWAY
+              </h6>
+
+              <div class="icons">
+                <img src="image/rfid.png" alt="servivces icon" />
+              </div>
+              <h6 style="margin-top: 15px; padding-left: 35px">RFID</h6>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12">
+            <div class="">
+              <div class="icons">
+                <img src="image/scanner.png" alt="services icon" />
+              </div>
+              <h6 style="margin-top: 15px">BAR CODE READER</h6>
+
+              <div class="icons">
+                <img src="image/biometric.png" alt="services icon" />
+              </div>
+              <h6 style="margin-top: 15px">BIO METRIC</h6>
+            </div>
+          </div> -->
+          <div class="col-lg-6 col-md-12">
+            <h3 class="display-4 hover" style="color: rgb(36, 87, 255)">
+              One Stop Solution
+            </h3>
+            <div class="align-items-center">
+              <!-- <div class="icons">
+                <img src="image/rfid.png" alt="services icon" />
+              </div>
+              <h6 style="margin-top: 15px; text-align: left">
+                TALLY INTEGRATION
+              </h6>
+              <div class="icons">
+                <img src="image/payment.png" alt="services icon" />
+              </div>
+              <h6 style="margin-top: 15px">WEBSITE INTEGRATION</h6> -->
+              <p>One Stop Solution For Your School management all need</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="position-relative">
+              <img
+                src="image/Solution.png"
+                class="img-fluid w-20 rounded"
+                alt="fact banner"
+                width="70%"
+              />
+              <!-- <div
+                class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute"
+                style="width: 140px; height: 140px; top: 0; left: 0"
+              >
+                <h1 style="font-size: 100px">1</h1>
+                <div class="d-flex flex-column">
+                  <span class="h2 mb-0">50$</span>
+                  <span class="h4 text-muted mb-0">kg</span>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faq Start -->
+    <div class="container-fluid vesitable">
+      <div class="container py-5">
+        <h1 class="display-4 hover" style="color: rgb(36, 87, 255)">
+          <span style="font-weight: normal; padding-left: 40%">FAQ</span>
+        </h1>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="FAQ_content">
+              <div>
+                <input
+                  type="checkbox"
+                  id="question1"
+                  name="q"
+                  class="questions"
+                />
+                <div class="plus">+</div>
+                <label for="question1" class="question"> FAQ 1 </label>
+                <div class="answers">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Repudiandae debitis soluta laudantium. Quisquam, placeat
+                  doloremque ut quibusdam neque enim reiciendis ipsum obcaecati
+                  officiis, recusandae eius mollitia eos laboriosam blanditiis
+                  assumenda.
+                </div>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="question2"
+                  name="q"
+                  class="questions"
+                />
+                <div class="plus">+</div>
+                <label for="question2" class="question"> FAQ 2 </label>
+                <div class="answers">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  nisi non et quasi, voluptatem eum adipisci quidem placeat,
+                  itaque nesciunt libero distinctio. Saepe consectetur nobis
+                  magni quod, exercitationem cupiditate vel!
+                </div>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="question3"
+                  name="q"
+                  class="questions"
+                />
+                <div class="plus">+</div>
+                <label for="question3" class="question"> FAQ 3 </label>
+                <div class="answers">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate, consectetur. Qui quia accusamus nihil, inventore
+                  laboriosam obcaecati minima maiores dolorem consequuntur
+                  accusantium placeat ipsam reprehenderit laudantium ipsa
+                  deleniti ab id?
+                </div>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="question4"
+                  name="q"
+                  class="questions"
+                />
+                <div class="plus">+</div>
+                <label for="question4" class="question"> FAQ 4 </label>
+                <div class="answers">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nihil beatae officia, fuga illum soluta dolores voluptatum
+                  corrupti maiores vel asperiores rem accusamus culpa qui,
+                  itaque veniam laboriosam fugiat sint quibusdam.
+                </div>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="question5"
+                  name="q"
+                  class="questions"
+                />
+                <div class="plus">+</div>
+                <label for="question5" class="question"> FAQ 5 </label>
+                <div class="answers">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Natus cumque unde praesentium adipisci, ea doloribus fuga!
+                  Voluptatem vel ad, porro doloribus nulla, odit, sequi mollitia
+                  dolorem obcaecati consequatur labore illo!
+                </div>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="question6"
+                  name="q"
+                  class="questions"
+                />
+                <div class="plus">+</div>
+                <label for="question6" class="question"> FAQ 6 </label>
+                <div class="answers">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  asperiores laborum sequi qui rem consequuntur maiores sunt
+                  reiciendis facilis tempora quod cupiditate quis veritatis
+                  eveniet laudantium animi ullam, illo ut.
+                </div>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="question7"
+                  name="q"
+                  class="questions"
+                />
+                <div class="plus">+</div>
+                <label for="question7" class="question"> FAQ 7 </label>
+                <div class="answers">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. At a
+                  consequatur tempora blanditiis iure deleniti, sapiente
+                  nesciunt ex provident possimus animi ducimus vitae dolorem?
+                  Dolorem aut mollitia perspiciatis ut voluptatibus.
+                </div>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="question8"
+                  name="q"
+                  class="questions"
+                />
+                <div class="plus">+</div>
+                <label for="question8" class="question"> FAQ 8 </label>
+                <div class="answers">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia culpa natus doloribus consequuntur fugiat, rem nemo.
+                  Ipsa, quos? Voluptates alias eum harum dignissimos voluptate
+                  magni ipsum quod sint vitae labore?
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Faq End -->
+    <br />
+    <div class="container text-center">
+      <a
+        class="btn border-secondary rounded-pill py-3 px-5 text-light Colourbuttton"
+        href="https://api.whatsapp.com/send?phone=+91 6294757182&amp;text=Hi, Please send Whats App message"
+        target="_blank"
+        >Book A Demo Session
+      </a>
+      <br />
+    </div>
+    <!-- Vesitable Shop Start-->
+    <!-- <div class="container-fluid vesitable">
+      <div class="container py-5">
+        <h1 class="display-4 hover" style="color: rgb(36, 87, 255)">
+          <span style="font-weight: normal; padding-left: 30%">Our</span>
+          Reputed Clients
+        </h1>
+        <div class="owl-carousel vegetable-carousel">
+          <div style="width: 50%">
+            <img src="image/school-logo.png" width="80%" alt="school image" />
+            <div class="">
+              <h6 style="text-align: center">School 0</h6>
+            </div>
+          </div>
+          <div style="width: 50%">
+            <img src="image/school-logo.png" width="80%" alt="school image" />
+            <div class="">
+              <h6 style="text-align: center">School 1</h6>
+            </div>
+          </div>
+          <div style="width: 50%">
+            <img src="image/school-logo.png" width="30%" alt="school image" />
+            <div>
+              <h6 style="text-align: center">School 2</h6>
+            </div>
+          </div>
+          <div style="width: 50%">
+            <img src="image/school-logo.png" width="30%" alt="school image" />
+            <div>
+              <h6 style="text-align: center">School 3</h6>
+            </div>
+          </div>
+          <div style="width: 50%">
+            <img src="image/school-logo.png" width="30%" alt="school image" />
+            <div>
+              <h6 style="text-align: center">School 4</h6>
+            </div>
+          </div>
+          <div style="width: 50%">
+            <img src="image/school-logo.png" width="30%" alt="school image" />
+            <div>
+              <h6 style="text-align: center">School 5</h6>
+            </div>
+          </div>
+          <div style="width: 50%">
+            <img src="image/school-logo.png" width="30%" alt="school image" />
+            <div>
+              <h6 style="text-align: center">School 6</h6>
+            </div>
+          </div>
+          <div style="width: 50%">
+            <img src="image/school-logo.png" width="30%" alt="school image" />
+            <div>
+              <h6 style="text-align: center">School 7</h6>
+            </div>
+          </div>
+          <div style="width: 50%">
+            <img src="image/school-logo.png" width="30%" alt="school image" />
+            <div>
+              <h6 style="text-align: center">School 8</h6>
+            </div>
+          </div>
+
+          <div style="width: 50%">
+            <img src="image/school-logo.png" width="70%" alt="school image" />
+            <div>
+              <h6 style="text-align: center">School 9</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Vesitable Shop End -->
+
+    <!-- Tastimonial Start -->
+    <div class="container-fluid testimonial py-5">
+      <div class="container">
+        <div class="testimonial-header text-center">
+          <h1 class="display-4 hover" style="color: rgb(36, 87, 255)">
+            <span style="font-weight: normal">Clients</span> Say About Us
+          </h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel">
+          <div class="testimonial-item img-border-radius bg-light rounded p-4">
+            <div class="position-relative">
+              <i
+                class="fa fa-quote-right fa-2x text-secondary position-absolute"
+                style="bottom: 30px; right: 0"
+              ></i>
+              <div class="mb-4 pb-4 border-bottom border-secondary">
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Dignissimos, quis. Alias quidem nemo praesentium minima
+                  perferendis nihil, qui tenetur, illo earum sint ut iure maxime
+                  blanditiis vitae. Autem, facilis pariatur?
+                </p>
+              </div>
+              <div class="d-flex align-items-center flex-nowrap">
+                <div class="bg-dark rounded">
+                  <img
+                    src="image/clients.png"
+                    class="img-fluid rounded"
+                    style="width: 100px; height: 100px"
+                    alt="Clients image"
+                  />
+                </div>
+                <div class="ms-4 d-block">
+                  <h4 class="text-dark">Abcd School</h4>
+                  <p class="m-0 pb-3">School Administrator</p>
+                  <!-- <div class="d-flex pe-5">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item img-border-radius bg-light rounded p-4">
+            <div class="position-relative">
+              <i
+                class="fa fa-quote-right fa-2x text-secondary position-absolute"
+                style="bottom: 30px; right: 0"
+              ></i>
+              <div class="mb-4 pb-4 border-bottom border-secondary">
+                <p class="mb-0">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+                  vero expedita est sit accusamus quae suscipit non, consectetur
+                  enim perferendis ex odio, repudiandae, veritatis ad minima
+                  commodi aut ipsam dignissimos.
+                </p>
+              </div>
+              <div class="d-flex align-items-center flex-nowrap">
+                <div class="bg-dark rounded">
+                  <img
+                    src="image/clients.png"
+                    class="img-fluid rounded"
+                    style="width: 100px; height: 100px"
+                    alt="Clients image"
+                  />
+                </div>
+                <div class="ms-4 d-block">
+                  <h4 class="text-dark">Abcd school</h4>
+                  <p class="m-0 pb-3">School Administrator</p>
+                  <!-- <div class="d-flex pe-5">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item img-border-radius bg-light rounded p-4">
+            <div class="position-relative">
+              <i
+                class="fa fa-quote-right fa-2x text-secondary position-absolute"
+                style="bottom: 30px; right: 0"
+              ></i>
+              <div class="mb-4 pb-4 border-bottom border-secondary">
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Consequuntur esse, fugiat assumenda sint tempora pariatur
+                  facilis explicabo. Impedit assumenda voluptas numquam quisquam
+                  magni laboriosam ipsum, voluptatem harum, expedita nihil fuga.
+                </p>
+              </div>
+              <div class="d-flex align-items-center flex-nowrap">
+                <div class="bg-dark rounded">
+                  <img
+                    src="image/clients.png"
+                    class="img-fluid rounded"
+                    style="width: 100px; height: 100px"
+                    alt="Clients image"
+                  />
+                </div>
+                <div class="ms-4 d-block">
+                  <h4 class="text-dark">abcd School</h4>
+                  <p class="m-0 pb-3">School Administrator</p>
+                  <!-- <div class="d-flex pe-5">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star"></i>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tastimonial End -->
+    <!-- Footer Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+      <div class="container">
+        <div class="row text-white border-bottom border-white">
+          <div class="col-lg-6">
+            <img
+              src="./image/digiexfooterlogo.png"
+              width="250px"
+              alt="footer-logo"
+              style="padding-left: 52px"
+            />
+            <br />
+            <ul style="list-style: none">
+              <li style="margin: 10px">
+                <i class="fas fa-map-marker-alt" style="font-size: 15px"></i>
+                Fifth Floor, Santosh Enclave, 14, Biswa Bangla Sarani, near
+                Chinar Park, Chinar Park, Crossing, Rajarhat, Kolkata, West
+                Bengal 700157
+              </li>
+              <li style="margin: 10px">
+                <i class="fa fa-phone" style="font-size: 15px"></i>
+                <a href="tel:+919212871807" class="text-white" target="_blank">
+                 033 3593 0570
+                </a>
+              </li>
+              <li style="margin: 10px">
+                <i class="fa fa-envelope" style="font-size: 15px"></i>
+                info@digiexweb.com
+              </li>
+              <li style="margin: 10px">
+                <i
+                  class="fab fa-facebook-f"
+                  style="font-size: 24px; margin: 10px"
+                ></i>
+                <i
+                  class="fab fa-instagram-square"
+                  style="font-size: 24px; margin: 10px"
+                ></i>
+                <i
+                  class="fab fa-linkedin"
+                  style="font-size: 24px; margin: 10px"
+                ></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                </svg>
+                <i
+                  class="fab fa-telegram"
+                  style="font-size: 24px; margin: 10px"
+                ></i>
+                <i
+                  class="fab fa-square-x-twitter"
+                  style="font-size: 24px; margin: 10px"
+                ></i>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul style="list-style: none">
+              <h2 class="text-white">Menu</h2>
+              <li><a href="#" class="text-white">Home</a></li>
+              <li><a href="#" class="text-white">About Us</a></li>
+              <li><a href="#" class="text-white">Products</a></li>
+              <li><a href="#" class="text-white">Resources</a></li>
+              <li><a href="#" class="text-white">Feature</a></li>
+              <li><a href="#" class="text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul style="list-style: none">
+              <h2 class="text-white">Facilities</h2>
+              <li>Fact 1</li>
+              <li>Fact 2</li>
+              <li>Fact 3</li>
+              <li>Fact 4</li>
+              <li>Fact 5</li>
+              <li>Fact 6</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Copyright Start -->
+        <div class="row">
+          <div class="col-md-12 my-auto text-center text-white">
+            © All rights reserved to Digiex Web services
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <!-- <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./home3.js"></script> -->
+    <script src="./home2.js"></script>
+    <!-- <script src="./home4.js"></script> -->
+    <script src="./owlcarousel.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="./home.js"></script>
+  </body>
+</html>
