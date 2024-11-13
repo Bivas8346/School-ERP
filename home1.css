@@ -498,6 +498,9 @@ body {
   .turncnts {
     width: 100%;
   }
+  .turn-img{
+    display: none;
+  }
 }
 
 /*** Working End ***/
