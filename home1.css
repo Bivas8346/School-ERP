@@ -479,6 +479,9 @@ body {
   .flex-element {
     margin-top: 20px;
   }
+  .turn-content-slider .turncnts {
+    display: block;
+  }
   .turn-content-slider p {
     max-width: 100%;
   }
